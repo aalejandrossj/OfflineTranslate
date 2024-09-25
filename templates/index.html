@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor de Texto</title>
+</head>
+<body>
+    <h1>Traductor de Texto</h1>
+    <form action="/translate" method="post">
+        <label for="text">Texto a traducir:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="source_language">Idioma de origen:</label><br>
+        <select id="source_language" name="source_language">
+            <option value="en">Inglés</option>
+            <option value="es">Español</option>
+            <option value="fr">Francés</option>
+        </select><br><br>
+        
+        <label for="target_language">Idioma de destino:</label><br>
+        <select id="target_language" name="language">
+            <option value="en">Inglés</option>
+            <option value="es">Español</option>
+            <option value="fr">Francés</option>
+        </select><br><br>
+        
+        <input type="submit" value="Traducir">
+    </form>
+    {% if translated_text %}
+        <h2>Texto Original:</h2>
